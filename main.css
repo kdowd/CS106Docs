@@ -1,0 +1,73 @@
+:root {
+  --tab-one-colour: #a686c3;
+  --tab-two-colour: #39b8b8;
+  --tab-three-colour: #8bc34a;
+  --site-colour: #434343;
+}
+
+body {
+  min-height: 100%;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  padding: var(--size-6);
+  background-color: var(--site-colour);
+  grid-template-columns: 1fr;
+  grid-gap: var(--size-6);
+  gap: var(--size-6);
+  font-size: 1.4rem;
+}
+
+ul {
+  font-size: 1.4rem;
+  list-style-type: decimal;
+  li {
+    details {
+      margin-left: 1.25rem;
+      summary {
+      }
+    }
+    padding: 0.5rem 0;
+  }
+}
+
+.tabcontent > details > summary {
+  font-size: 2rem;
+  color: snow;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.3333%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#partA {
+  background-color: var(--tab-one-colour);
+}
+#partB {
+  background-color: var(--tab-two-colour);
+}
+#Contact {
+  background-color: var(--tab-three-colour);
+}
+#About {
+  background-color: orange;
+}
