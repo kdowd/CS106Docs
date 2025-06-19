@@ -1,115 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://unpkg.com/open-props@1.7.15/open-props.min.css" />
+		<link rel="stylesheet" href="https://unpkg.com/open-props/gray-hsl.min.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/open-props@1.7.15/open-props.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/open-props/gray-hsl.min.css">
+		<link rel="stylesheet" href="./main.css" />
+		<script src="./main.js" defer></script>
+	</head>
 
-    <link rel="stylesheet" href="./main.css">
-    <script src="./main.js" defer></script>
+	<body>
+		<button
+			style="background-color: var(--tab-one-colour)"
+			class="tablink"
+			onclick="openPage('partA', this, 'var(--tab-one-colour)')">
+			Part A
+		</button>
+		<button class="tablink" onclick="openPage('partB', this, 'var(--tab-two-colour)')" id="defaultOpen">Part B</button>
+		<button class="tablink" onclick="openPage('Contact', this, 'var(--tab-three-colour)')">Important</button>
 
-</head>
+		<div id="partA" class="tabcontent" style="display: block">
+			<h3>Part 1 (25%)</h3>
+			<details>
+				<summary>Task 1.1</summary>
+				<ul>
+					<li>Objective of the project</li>
+					<li>
+						<details>
+							<summary>Stages of the project</summary>
+							<p>Planning & Analysis</p>
+							<p>Design</p>
+							<p>Development</p>
+							<p>Testing</p>
+							<p>Deployment</p>
+							<p>Maintenance</p>
+						</details>
+					</li>
+					<li>Timeframes - Sprints</li>
+					<li>
+						<details>
+							<summary>Software requirements</summary>
+							<p>Visual Studio</p>
+							<p>Mongo DB</p>
+							<p>.NET 9</p>
+							<p>C# 12</p>
+							<p>WPF</p>
+							<p>Windows 10 or 11 Desktop</p>
+						</details>
+					</li>
+					<li>Tasks</li>
+					<li>Who will perform tasks?</li>
+				</ul>
+			</details>
+			<details>
+				<summary>Task 1.2</summary>
+				<ul>
+					<li>Introduction</li>
+					<li>Project Overview</li>
+					<li>Project Objective</li>
+					<li>Project Scope</li>
+					<li>Methodology - Agile !</li>
+					<li>Project Team</li>
+					<li>Project Stages</li>
+					<li>Project Deliverables</li>
+					<li>Project Budget</li>
+					<li>Project Timelines</li>
+					<li>Project Risks and Management</li>
+					<li>Quality Assurance</li>
+					<li>Communication Plan</li>
+					<li>Approval</li>
+					<li>Sign-off</li>
+				</ul>
+			</details>
+		</div>
 
-<body>
-    <button class="tablink" onclick="openPage('partA', this, 'var(--tab-one-colour)')">Part A</button>
-    <button class="tablink" onclick="openPage('partB', this, 'var(--tab-two-colour)')" id="defaultOpen">Part B</button>
-    <button class="tablink" onclick="openPage('Contact', this, 'var(--tab-three-colour)')">Style</button>
+		<div id="partB" class="tabcontent">
+			<h3>Part 1 (75%)</h3>
 
+			<details open>
+				<summary>Task 1.1</summary>
+				<ul>
+					<li>Roles : Only two, Scrum Master or Team Member. Show communication.</li>
+					<li>Evidence of Agile: Git, Teams Messages/Comments/Task Ownership</li>
+					<li>Lo Fi And/Or Hi-Fi Prototype</li>
+					<li>UI screenshots</li>
+					<li>OOP concepts used / Classes</li>
+					<li>UML class diagram</li>
+					<li>Datbase Dev SQL or NoSQL. Show Mappings (DDL / Schema)</li>
+					<li>Entity Relationship Diagram - Show Tables or Documents/Fields</li>
+				</ul>
+			</details>
+		</div>
 
-    <div id="partA" class="tabcontent">
-        <h3>Part 1 (25%)</h3>
-        <details>
-            <summary>Task 1.1</summary>
-            <ul>
-                <li>Objective of the project</li>
-                <li>
-                    <details>
-                        <summary>Stages of the project</summary>
-                        <p>Planning & Analysis</p>
-                        <p>Design</p>
-                        <p>Development</p>
-                        <p>Testing</p>
-                        <p>Deployment</p>
-                        <p>Maintenance</p>
-                    </details>
-                </li>
-                <li>Timeframes - Sprints</li>
-                <li>
-                    <details>
-                        <summary>Software requirements</summary>
-                        <p>Visual Studio</p>
-                        <p>Mongo DB</p>
-                        <p>.NET 9</p>
-                        <p>C# 12</p>
-                        <p>WPF</p>
-                        <p>Windows 10 or 11 Desktop</p>
-                    </details>
-                </li>
-                <li>Tasks</li>
-                <li>Who will perform tasks?</li>
-            </ul>
-        </details>
-        <details>
-            <summary>Task 1.2</summary>
-            <ul>
-                <li>Introduction</li>
-                <li>Project Overview</li>
-                <li>Project Objective</li>
-                <li>Project Scope</li>
-                <li>Methodology - Agile !</li>
-                <li>Project Team</li>
-                <li>Project Stages</li>
-                <li>Project Deliverables</li>
-                <li>Project Budget</li>
-                <li>Project Timelines</li>
-                <li>Project Risks and Management</li>
-                <li>Quality Assurance</li>
-                <li>Communication Plan</li>
-                <li>Approval</li>
-                <li>Sign-off</li>
-            </ul>
-        </details>
-    </div>
-
-    <div id="partB" class="tabcontent">
-        <h3>Part 1 (75%)</h3>
-
-        <details open>
-            <summary>Task 1.1</summary>
-            <ul>
-                <li>Roles : Scrum Master or Team Member etc</li>
-                <li>Evidence of Agile: Git, Teams Messages/Comments/Task Ownership</li>
-                <li>Lo Fi And/Or Hi-Fi Prototype</li>
-                <li>UI screenshots</li>
-                <li>OOP concepts used / Classes</li>
-                <li>UML class diagram</li>
-                <li>Datbase Dev SQL or NoSQL. Show Mappings (DDL / Schema)</li>
-                <li>Entity Relationship Diagram - Show Tables or Documents/Fields</li>
-            </ul>
-        </details>
-
-    </div>
-
-    <div id="Contact" class="tabcontent">
-        <h3>Style</h3>
-        <p>
-            The project proposal
-            is formatted to an excellent
-            level with a table of contents,
-            page number, headers,
-            footers, appropriate fonts, list
-            of tables, list of figures, and
-            appendices.</p>
-        <p>References
-            completely follow the APA7
-            format and all in-text citations
-            are present.</p>
-    </div>
-
-
-</body>
-
+		<div id="Contact" class="tabcontent">
+			<h3>Document:</h3>
+			<p>
+				The project proposal is formatted to an excellent level with a table of contents, page number, headers, footers.
+				.
+			</p>
+			<h3>Diagrams:</h3>
+			<ul>
+				<li>UML Class Diagram</li>
+				<li>
+					Entity RelationShip Diagram - your database tables OR collections showing datatype and name.
+					<p><a href="https://www.youtube.com/watch?v=6uwuNRUUimY">SQL Entity Relationship Diagram (3 mins )</a></p>
+				</li>
+			</ul>
+		</div>
+	</body>
 </html>
